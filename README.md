@@ -1,6 +1,6 @@
 # Textbook Pipeline
 
-This repository contains modular, locally runnable pipelines for extracting structured text from scanned textbooks using a combination of OCR, vision-language models (VLMs), and large language models (LLMs).
+This repository was created to contain modular, locally runnable pipelines for extracting structured text from scanned textbooks using a combination of OCR, vision-language models (VLMs), and large language models (LLMs).
 
 The goal is to build a clean, searchable corpus for multilingual document analysis using only local infrastructure — no cloud APIs, fully reproducible on platforms like the ALICE HPC cluster at Leiden University or other high-end consumer machines.
 
