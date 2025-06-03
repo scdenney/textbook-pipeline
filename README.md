@@ -32,7 +32,7 @@ This project is built to run on:
 
 Dependencies include:
 - Python ≥ 3.10
-- [EasyOCR](https://github.com/JaidedAI/EasyOCR) for OCR extraction
+- [EasyOCR](https://github.com/JaidedAI/EasyOCR) for OCR extraction [or alternative - e.g., loghi (https://github.com/knaw-huc/loghi)]
 - [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) or [llava.cpp](https://github.com/jllllll/llava.cpp) for local model inference
 - Quantized weights for LLMs (EXAONE-70B, EXAONE-7B) and VLMs (LLaVA-1.5 + Mistral)
 - PDF-to-image conversion via `pdf2image`, `PyMuPDF`, or `pdfplumber`
