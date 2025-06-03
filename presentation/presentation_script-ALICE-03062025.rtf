@@ -1,0 +1,270 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;\red0\green0\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c100000;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww13500\viewh15900\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf2 \expnd0\expndtw0\kerning0
+Presentation Script (2025 ALICE-SHARK User Meeting)
+\f1\b0\fs32 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Estimated: ~10\'9612 minutes
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 1 \'96 Title
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Hi, I\'92m Steven Denney from Leiden University. This talk shares an ongoing project that uses ALICE to support scalable, language-model-based document processing \'97 specifically for Korean history textbooks, non-Latin scripts, and \'96 really \'96 anything. But I work with Asian languages and often Korean. So, this is the language source from which this project is motivated.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 2 \'96 Why This Project?
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 The idea came out of a research need: I work with historical social and history textbooks to analyze how states narrate identity. These are often scanned PDFs, full of visual noise and hard to work with \'97 especially when they use non-Latin scripts like Korean.
+\f1 \
+
+\f2 OCR performance here is predictably poor, especially using tools trained on Latin fonts. So the challenge was to build something better: a pipeline that\'92s not just accurate, but scalable, script-flexible, and fully local. ALICE makes that possible.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 3 \'96 Corpus Construction Goals
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 The goal is to create a clean, searchable corpus from these scans. To get there, I\'92m evaluating two pipelines:
+\f1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pipeline A: a traditional OCR-based flow
+\f1 \
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pipeline B: a newer, vision-language model approach that bypasses OCR entirely
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Everything is optimized for ALICE: quantized models, local inference, no cloud calls.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 4 \'96 What We\'92re Working With
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 This is the raw material: scanned Korean textbooks. On the left is a cover, and on the right, the first page of content. Layout is non-trivial. Fonts vary. Margins shift. This is a real test for any NLP workflow \'97 but it might be an opportunity for image-based approaches.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 5 \'96 Language, Modularity, and Scale
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 This pipeline starts with Korean, but it\'92s designed to scale and should work with practically any language. Every component \'97 the vision model, the language model, the post-processing logic \'97 is modular.
+\f1 \
+
+\f2 I\'92m currently working EXAONE, a Korean-specific LLM, for cleaning. But the idea is that you could swap in any LLM to integrate into a OCR system, and reuse the rest. That\'92s the ultimate goal: a scalable, multilingual architecture for document extraction.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 6 \'96 Pipeline Typical
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 This is what most people still use: a basic OCR pipeline. You go from PDF to image, then run Tesseract or EasyOCR, then manually patch together structured text.
+\f1 \
+
+\f2 It works reasonably well on clean Latin script. But for layout-rich Korean materials, for example, it performs quite poorly and sometimes just breaks down.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 7 \'96 Pipeline A: OCR-Based
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Here\'92s Pipeline A. It\'92s what I started with and am working with.\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 I convert PDFs to PNGs. Use EasyOCR \'96 which frankly works best with my python workflow \'96 to extract text. Then pass that raw, noisy output through EXAONE. The model handles spacing errors, punctuation, and malformed tokens. Finally, we serialize the cleaned text into structured JSON.
+\f1 \
+
+\f2 This worked well enough that I validated it manually \'97 comparing pre- and post-cleaned outputs. EXAONE consistently reduced OCR error and improved sentence segmentation considerably. Here is LLM-based innovation #1. 
+\f1 \
+
+\f2 But we can \'96 I think \'96 do more. 
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 8 \'96 Pipeline B: Vision-Language Prototype
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 This is my aspirational pipeline.
+\f1 \
+
+\f2 Instead of OCR, I convert pages to images, then feed those directly into a vision-language model \'97 say, perhaps, LLaVA-1.5 with Mistral. It returns raw interpreted text. We still run EXAONE afterward to clean and structure it.
+\f1 \
+
+\f2 The payoff is better layout understanding and cleaner output on pages where OCR completely fails. This is LLM-based innovation #2.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 9 \'96 Model Infrastructure: Ideal and Tested
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Two types of models here.
+\f1 \
+
+\f2 The ideal setup is:
+\f1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+EXAONE-Deep 70B for post-cleaning
+\f1 \
+\ls2\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+LLaVA-1.5 + Mistral 7B for image-to-text inference
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Both can be quantized and run efficiently on ALICE GPU nodes.
+\f1 \
+
+\f2 We also tested:
+\f1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f2 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+EXAONE 7B for early post-processing work
+\f1 \
+\ls3\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MiniGPT-4 and LLaVA-1.5 on consumer GPUs \'97 slower, but good for proof-of-concept testing
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 This mix has helped us iterate fast, then scale cleanly.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 10 \'96 Comparing the Pipelines
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 When comparing the two:
+\f1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f2 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pipeline A is faster and more mature, but layout gets lost.
+\f1 \
+\ls4\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pipeline B is promising \'97 especially for page structure \'97 but requires more tuning and GPU time.
+\f1 \
+\ls4\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Both are now batchable. I\'92m working toward a hybrid pipeline that uses B when A fails.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 11 \'96 Built for ALICE?
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Everything runs on ALICE.
+\f1 \
+
+\f2 Models are quantized, and inference is handled locally via 
+\f3\fs26\fsmilli13333 llama-cpp-python
+\f2\fs32  or 
+\f3\fs26\fsmilli13333 llava.cpp
+\f2\fs32 . There are no API calls, no cloud dependencies \'97 which matters for reproducibility, cost, and data control.
+\f1 \
+
+\f2 Future work includes fallback automation \'97 if VLM fails, switch to OCR \'97 and expanding across larger textbook sets.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 12 \'96 Next Steps
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Right now, I\'92m tuning the VLM on Korean textbook layouts.
+\f1 \
+
+\f2 The plan is to release both pipelines, along with sample corpora, validation notes, and findings. But I also want to reflect: is the VLM route worth it? It's more expensive. It's more fragile. But for some types of documents, I think it's essential. And it might be awesome.
+\f1 \
+\pard\pardeftab720\sa160\qc\partightenfactor0
+
+\f2 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 Slide 13 \'96 Thank You
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 Everything will be released at:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://github.com/scdenney/textbook-pipeline"}}{\fldrslt \cf4 \ul \ulc4 github.com/scdenney/textbook-pipeline}}
+\f1 \
+
+\f2 Feel free to reach out. Thanks for listening.
+\f1 \
+\
+\
+}
